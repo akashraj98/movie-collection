@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+.vscode
+# Ignore migrations folder
+migrations/
+
+
 # Distribution / packaging
 .Python
 build/
