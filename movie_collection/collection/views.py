@@ -1,112 +1,52 @@
 from django.http import JsonResponse
 from rest_framework.views import APIView
-from .service import get_movies_from_api
+from .services import get_movies_from_api
 from rest_framework.permissions import IsAuthenticated
-from .models import Collection, Movie, CollectionMovie
 from rest_framework import status
 from rest_framework.response import Response
-from .serializers import CollectionSerializer
+from . import services
 
 class MovieListView(APIView):
     permission_classes = [IsAuthenticated]
+    
     def get(self, request):
         page = request.GET.get('page', 1)
         movies_data = get_movies_from_api(page)
         if movies_data is not None:
-            # change the next and previous url accordingly
             return JsonResponse(movies_data)
         else:
-            return JsonResponse({'error': 'Failed to fetch movies'}, status=500)
-        
+            return JsonResponse({'error': 'Failed to fetch movies'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class CollectionListCreateView(APIView):
     permission_classes = [IsAuthenticated]
+    
     def get(self, request):
-        user = request.user
-        collections = Collection.objects.filter(user=user)
-        serializer = CollectionSerializer(collections, many=True)
-        genre_counts = {}
-        for collection in collections:
-            movies = CollectionMovie.objects.filter(collection=collection)
-            for movie in movies:
-                for genre in movie.movie.genres.split(','):
-                    genre = genre.strip()
-                    genre_counts[genre] = genre_counts.get(genre, 0) + 1
-        top_genres = sorted(genre_counts.items(), key=lambda x: x[1], reverse=True)[:3]
-        top_genres = [genre for genre, _ in top_genres]
-        return Response({
-            "is_success": True,
-            "data": {
-                "collections": serializer.data,
-                "favourite_genres": ", ".join(top_genres)
-            }
-        })
+        result = services.get_user_collections(request.user)
+        return Response(result, status=status.HTTP_200_OK)
     
     def post(self, request):
-        data = request.data
-        title = data.get('title')
-        description = data.get('description')
-        user = request.user
-        collection_obj, created = Collection.objects.get_or_create(
-            title=title,
-            description=description,
-            user = user
-        )
+        result = services.create_collection(request.user, request.data)
+        return Response(result, status=status.HTTP_201_CREATED)
 
-        movies = data.get('movies')
-        for movie in movies:
-            try:
-                movie_obj = Movie.objects.get(uuid=movie['uuid'])
-            except Movie.DoesNotExist:
-                movie_obj = Movie.objects.create(
-                    title=movie['title'],
-                    description=movie['description'],
-                    genres=movie['genres'],
-                    uuid=movie['uuid']
-                )
-
-            CollectionMovie.objects.create(
-                collection=collection_obj,
-                movie=movie_obj
-            )
-        return Response({
-            "is_success": True,
-            "message": "Collection created successfully",
-            "collection_uuid": collection_obj.uuid
-
-        },status=status.HTTP_201_CREATED)
-            
-
-    
 class CollectionDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, uuid):
-        try:
-            collection = Collection.objects.get(uuid=uuid, user=request.user)
-        except Collection.DoesNotExist:
+        result = services.get_collection_detail(request.user, uuid)
+        if result is None:
             return Response({"error": "Collection not found"}, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = CollectionSerializer(collection)
-        return Response(serializer.data)
+        return Response(result, status=status.HTTP_200_OK)
 
     def put(self, request, uuid):
-        try:
-            collection = Collection.objects.get(uuid=uuid, user=request.user)
-        except Collection.DoesNotExist:
+        result = services.update_collection(request.user, uuid, request.data)
+        if result is None:
             return Response({"error": "Collection not found"}, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = CollectionSerializer(collection, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if 'errors' in result:
+            return Response(result['errors'], status=status.HTTP_400_BAD_REQUEST)
+        return Response(result, status=status.HTTP_200_OK)
 
     def delete(self, request, uuid):
-        try:
-            collection = Collection.objects.get(uuid=uuid, user=request.user)
-        except Collection.DoesNotExist:
+        result = services.delete_collection(request.user, uuid)
+        if not result:
             return Response({"error": "Collection not found"}, status=status.HTTP_404_NOT_FOUND)
-
-        collection.delete()
         return Response({"message": "Collection deleted successfully"}, status=status.HTTP_204_NO_CONTENT)

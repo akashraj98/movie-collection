@@ -32,9 +32,8 @@ class UserLoginView(APIView):
 
                 refresh_token = RefreshToken.for_user(user)
                 return Response({
-
-                    "refresh": str(refresh_token),
-                    "access": str(refresh_token.access_token),
+                    "access_token": str(refresh_token.access_token),
+                    "refresh_token": str(refresh_token),
                 },status=status.HTTP_200_OK)
             else:
                 return Response({"error": "Invalid username or password"}, status=status.HTTP_401_UNAUTHORIZED)
