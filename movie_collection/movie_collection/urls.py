@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from collection.views import MovieListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/users/', include('users.urls')),
+    path('api/v1/movies/', MovieListView.as_view()),
+    path('api/v1/collection/', include('collection.urls')),
 ]

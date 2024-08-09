@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'users',
+    'collection',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#API
+MOVIE_API_URL = os.getenv('MOVIE_API_URL',default='https://api.themoviedb.org/3')
+MOVIE_API_USERNAME = os.getenv('MOVIE_API_USERNAME',default='api')
+MOVIE_API_PASSWORD = os.getenv('MOVIE_API_PASSWORD',default='api')
