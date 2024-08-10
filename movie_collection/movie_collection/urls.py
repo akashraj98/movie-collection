@@ -24,4 +24,5 @@ urlpatterns = [
     path('api/v1/users/', include('users.urls')),
     path('api/v1/movies/', MovieListView.as_view()),
     path('api/v1/collection/', include('collection.urls')),
+    path('', include('request_counter.urls')),
 ]

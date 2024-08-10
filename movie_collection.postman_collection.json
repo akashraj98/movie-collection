@@ -1,0 +1,1040 @@
+{
+	"info": {
+		"_postman_id": "bbe44500-91ac-43ba-870a-3abb56ab65f4",
+		"name": "movie_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8008235",
+		"_collection_link": "https://solar-space-995644.postman.co/workspace/My-Workspace~2db56cc0-597d-41eb-8294-dab0c7575a85/collection/8008235-bbe44500-91ac-43ba-870a-3abb56ab65f4?action=share&source=collection_link&creator=8008235"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"akash_movies\",\n  \"password\": \"securepassword123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"akash_movies\",\n  \"password\": \"securepassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 07 Aug 2024 19:31:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMzY2Mzg2NywiaWF0IjoxNzIzMDU5MDY3LCJqdGkiOiJjMjQ3MzA1NGI1MzM0ZGZiYmY3NDNlMzdjNjhhMzM1MCIsInVzZXJfaWQiOjN9.4PG0s3MSZbcEbv8NOyyu2bwby24wtA570cDUyuWs60I\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMTQ1NDY3LCJpYXQiOjE3MjMwNTkwNjcsImp0aSI6ImZkMDJjZDMwZWUxMDQ4Nzg5ZjA0Y2EyNmZiZmZkZTEzIiwidXNlcl9pZCI6M30.qodZvOBeUni6i0q11GuCFPxQE3HkQuUPxXfcGZBtHOY\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"sdfdsfsdf\",\n  \"password\": \"securepassword123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"sdfdsfsdf\",\n  \"password\": \"securepassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 07 Aug 2024 20:03:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "518"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMzY2NTgxOSwiaWF0IjoxNzIzMDYxMDE5LCJqdGkiOiIzYWE4NmVkYzkzNGI0NzE2YjcxNzgwODAzODc1YzA5ZSIsInVzZXJfaWQiOjZ9.SKj2dVuxbDhSP2UtEfltZjy9m6kUuID2SspIi58Tm0I\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMTQ3NDE5LCJpYXQiOjE3MjMwNjEwMTksImp0aSI6IjYyN2RlZTk4MmFhMTRmN2Q5YTQwMGIzNzgxN2U1ZTZiIiwidXNlcl9pZCI6Nn0.KOr1QU5kO6Wx00laP5LB-QI3wjPKtjSUvpT-Vbp36UM\",\n    \"redirect\": \"http://localhost:3000\"\n}"
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Adventure collection\",\n    \"description\": \"My collection of adventure movies\",\n    \"movies\": [\n        {\n            \"title\": \"journery to centre of earth\",\n            \"description\": \"]Normal romance movie where one of the lover dies\",\n            \"genres\": \"adventure\",\n            \"uuid\": \"8c7b6d7f-7bc3-482a-abce-be80ea03ab57\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/movies/?page=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMTQ3NDE5LCJpYXQiOjE3MjMwNjEwMTksImp0aSI6IjYyN2RlZTk4MmFhMTRmN2Q5YTQwMGIzNzgxN2U1ZTZiIiwidXNlcl9pZCI6Nn0.KOr1QU5kO6Wx00laP5LB-QI3wjPKtjSUvpT-Vbp36UM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/movies/?page=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Aug 2024 06:22:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6903"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 45466,\n    \"next\": \"https://demo.credy.in/api/v1/maya/movies/?page=7\",\n    \"previous\": \"https://demo.credy.in/api/v1/maya/movies/?page=5\",\n    \"results\": [\n        {\n            \"title\": \"The Hunters\",\n            \"description\": \"An ethnographic film that documents the efforts of four !Kung men (also known as Ju/'hoansi or Bushmen) to hunt a giraffe in the Kalahari Desert of Namibia. The footage was shot by John Marshall during a Smithsonian-Harvard Peabody sponsored expedition in 1952–53. In addition to the giraffe hunt, the film shows other aspects of !Kung life at that time, including family relationships, socializing and storytelling, and the hard work of gathering plant foods and hunting for small game.\",\n            \"genres\": \"Documentary\",\n            \"uuid\": \"6874f2a0-4387-4ce5-bf69-6fa9f40e6f37\"\n        },\n        {\n            \"title\": \"Dead Birds\",\n            \"description\": \"The film's title is borrowed from a Dani fable that Gardner recounts in voice-over. The Dani people, whom Gardner identifies mysteriously as \\\"a mountain people,\\\" believe that there was once a great race between a bird and a snake, which was to determine the lives of human beings. Should men shed their skins and live forever like snakes, or die like birds? The bird won the race, dictating that man must die. The film's plot revolves around two characters, Weyak and Pua. Weyak is a warrior who guards the frontier between the land of his tribe and that of the neighboring tribe. Pua is a young boy whom Gardner depicts as weak and inept.\",\n            \"genres\": \"Documentary\",\n            \"uuid\": \"efc3fe64-3d25-4318-8eb9-3a60a7ac6b70\"\n        },\n        {\n            \"title\": \"Кука\",\n            \"description\": \"A woman and a young girl in different cities are struggling to find their way in this world. Will their paths intersect and will that change their destinies?\",\n            \"genres\": \"Romance,Drama\",\n            \"uuid\": \"29b6fef8-14ad-4a67-9c5c-a51d802ec4b8\"\n        },\n        {\n            \"title\": \"Про любоff\",\n            \"description\": \"У девушки Даши, приехавшей с подругой «покорять» Москву, редкая специальность — преподаватель техники речи, а жизнь — самая обыкновенная: съемная квартира, невысокие гонорары и занятия с утра до вечера. Однажды Даша получает выгодное предложение — дать уроки преуспевающему бизнесмену Владу, участвующему в политических выборах. У героев начинается бурный роман. Но случайная встреча с женой Влада заставляет Дашу взглянуть на происходящее совсем с другой стороны. И Влад оказывается совсем не героем романа и вовсе не мужчиной мечты…\",\n            \"genres\": \"Romance,Drama\",\n            \"uuid\": \"8204c54b-6db6-44b1-944f-3d0af0b3997e\"\n        },\n        {\n            \"title\": \"Kacheli\",\n            \"description\": \"The life of a characters of this movie can be described as a swing - up and down, up and down; each day, each week...\",\n            \"genres\": \"Romance,Drama,Action\",\n            \"uuid\": \"b0a14122-2487-4e68-9a51-aedbd3ac5c53\"\n        },\n        {\n            \"title\": \"Aprel\",\n            \"description\": \"\",\n            \"genres\": \"Drama,Crime\",\n            \"uuid\": \"7723dd93-e762-4fc0-94d0-3dc002e5fb0d\"\n        },\n        {\n            \"title\": \"Dikari\",\n            \"description\": \"The sea, August, interesting and simple people. They tan, swim, play volleyball, basketball, drink, dance and then find someone to spend the night with. Many grew out of their student phase and can afford a more comfortable holiday but when July comes they grab a tent, jump into their cars and come here. Here, nobody talks about work and the size of your wallet means nothing.\",\n            \"genres\": \"Comedy,Drama\",\n            \"uuid\": \"557bd863-5ab9-4682-95e5-a84f17f1d648\"\n        },\n        {\n            \"title\": \"Марс\",\n            \"description\": \"Somewhere deep, deep in Russia there is a town called Marks (named after Karl Marks, founder of Communism theory) where all people are working on toy factory and receiving their wages as toys. News from other cities are arriving on very rare occasion. One morning, Boris, a former boxing who is running from something, wakes up in train and see four letters MAR_S. From his first steps he starts to meet new people as Gregori, young man with a dream who is in love with local librarian, Greta, whose dream is to get out from this god-forgotten town. With each new step, he is meeting new people, but the past is hard to escape\",\n            \"genres\": \"Comedy\",\n            \"uuid\": \"ca910b99-3c60-469c-a6aa-c3790dabf975\"\n        },\n        {\n            \"title\": \"Samoubiytsy\",\n            \"description\": \"Comedy about the crazy adventures of three friends - Alexey, Tolik and Marina, who decided to commit suicide.\",\n            \"genres\": \"Comedy\",\n            \"uuid\": \"454343d8-ce3e-4f5b-bc05-cb5c5b2dd09f\"\n        },\n        {\n            \"title\": \"Zolushka\",\n            \"description\": \"Masha Krapivina - is yet beautiful, and not that clever. She is just an ordinary girl, like thousands of her peers from different parts of the country, who risked to try to conquer Moscow and left their native country town.\",\n            \"genres\": \"Comedy,Romance\",\n            \"uuid\": \"d1757edc-4df4-47d9-86db-d78163363f10\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET all Collection",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collection/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						""
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Collection",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/collection/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"collection",
+								""
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 22:28:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"is_success\": true,\n    \"data\": {\n        \"collections\": [\n            {\n                \"title\": \"Romance collection\",\n                \"description\": \"My collection of romance movies\",\n                \"uuid\": \"f5350bc6-94ef-483a-b1f5-f0cf4f672741\"\n            },\n            {\n                \"title\": \"Adventure collection\",\n                \"description\": \"My collection of adventure movies\",\n                \"uuid\": \"127a661f-7f83-4f00-b2a4-b90fd74edec3\"\n            }\n        ],\n        \"favourite_genres\": \"romance, adventure\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "create collection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"horror collection\",\n    \"description\": \"My collection of horror movies\",\n    \"movies\": [\n        {\n            \"title\": \"mirror\",\n            \"description\": \"]Normal horror movie where one of the lover dies\",\n            \"genres\": \"horror\",\n            \"uuid\": \"9c7b6d7f-7bc3-482a-abce-be80ea03ab57\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collection/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create collection",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"horror collection\",\n    \"description\": \"My collection of horror movies\",\n    \"movies\": [\n        {\n            \"title\": \"mirror\",\n            \"description\": \"]Normal horror movie where one of the lover dies\",\n            \"genres\": \"horror\",\n            \"uuid\": \"9c7b6d7f-7bc3-482a-abce-be80ea03ab57\"\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/collection/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"collection",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 22:30:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "120"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"is_success\": true,\n    \"message\": \"Collection created successfully\",\n    \"collection_uuid\": \"596b8c68-c53a-4e17-8cf0-b62b9ace051d\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Collection",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collection/596b8c68-c53a-4e17-8cf0-b62b9ace051d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"596b8c68-c53a-4e17-8cf0-b62b9ace051d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Collection",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/collection/596b8c68-c53a-4e17-8cf0-b62b9ace051d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"collection",
+								"596b8c68-c53a-4e17-8cf0-b62b9ace051d"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 22:38:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Collection deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get single collection",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collection/f5350bc6-94ef-483a-b1f5-f0cf4f672741",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"f5350bc6-94ef-483a-b1f5-f0cf4f672741"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get single collection",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/collection/f5350bc6-94ef-483a-b1f5-f0cf4f672741",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"collection",
+								"f5350bc6-94ef-483a-b1f5-f0cf4f672741"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 22:51:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "251"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Romance collection\",\n    \"description\": \"My collection of romance movies\",\n    \"movies\": [\n        {\n            \"title\": \"fault in our stars\",\n            \"description\": \"]Normal romance movie where one of the lover dies\",\n            \"genres\": \"romance\",\n            \"uuid\": \"7c7b6d7f-7bc3-482a-abce-be80ea03ab57\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "update collection",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Romance collection updated\",\n    \"description\": \"My collection of romance movies2\",\n    \"movies\": [\n        {\n            \"title\": \"34 in our stars\",\n            \"description\": \"]Normal romance movie where one of the lover dies\",\n            \"genres\": \"romance\",\n            \"uuid\": \"7c7b6d7f-7bc3-482a-abce-be80ea03ab56\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collection/f5350bc6-94ef-483a-b1f5-f0cf4f672741",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"f5350bc6-94ef-483a-b1f5-f0cf4f672741"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update collection",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzMzIzNjU4LCJpYXQiOjE3MjMyMzcyNTgsImp0aSI6IjVjZTdmMzhmOWQ5NTQyZjNhOTU2MTA2MmY5OTY2NzFlIiwidXNlcl9pZCI6Nn0.oXtWjcggOJdjpmiEwXbyBcq7_u7N8PH4cwc2CgM4EPM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Romance collection updated\",\n    \"description\": \"My collection of romance movies2\",\n    \"movies\": [\n        {\n            \"title\": \"34 in our stars\",\n            \"description\": \"]Normal romance movie where one of the lover dies\",\n            \"genres\": \"romance\",\n            \"uuid\": \"7c7b6d7f-7bc3-482a-abce-be80ea03ab56\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/collection/f5350bc6-94ef-483a-b1f5-f0cf4f672741",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"collection",
+								"f5350bc6-94ef-483a-b1f5-f0cf4f672741"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 23:07:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "257"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Romance collection updated\",\n    \"description\": \"My collection of romance movies2\",\n    \"movies\": [\n        {\n            \"title\": \"34 in our stars\",\n            \"description\": \"]Normal romance movie where one of the lover dies\",\n            \"genres\": \"romance\",\n            \"uuid\": \"7c7b6d7f-7bc3-482a-abce-be80ea03ab56\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "request counter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/request-count/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"request-count",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "request counter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/request-count/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"request-count",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 10 Aug 2024 00:06:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requests\": 2\n}"
+				}
+			]
+		}
+	]
+}
